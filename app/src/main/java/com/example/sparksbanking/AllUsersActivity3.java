@@ -25,7 +25,6 @@ public class AllUsersActivity3 extends AppCompatActivity implements TransferToUs
 
     private DBUserHelper dbHelper;
 
-    String date=null, time=null;
     int fromUserAccountNo, toUserAccountNo, toUserAccountBalance;
     String fromUserAccountName, fromUserAccountBalance, transferAmount, toUserAccountName;
 
@@ -36,7 +35,6 @@ public class AllUsersActivity3 extends AppCompatActivity implements TransferToUs
 
         Calendar calendar = Calendar.getInstance();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MMM-yyyy, hh:mm a");
-        String date_and_time = simpleDateFormat.format(calendar.getTime());
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
@@ -64,7 +62,6 @@ public class AllUsersActivity3 extends AppCompatActivity implements TransferToUs
 
     @Override
     public void onUserClick(int position) {
-        // Insert data into transactions table
         toUserAccountNo = userArrayList.get(position).getAccountNumber();
         toUserAccountName = userArrayList.get(position).getName();
         toUserAccountBalance = userArrayList.get(position).getBalance();

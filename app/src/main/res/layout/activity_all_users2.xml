@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,200 +8,335 @@
     android:layout_height="match_parent"
     tools:context=".AllUsersActivity2">
 
-    <ImageView
-        android:padding="5dp"
-        android:src="@drawable/users"
-        android:requiresFadingEdge="horizontal"
-        android:fadingEdge="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_gravity="center_horizontal"/>
-
     <LinearLayout
-        android:padding="5dp"
-        android:layout_marginTop="40dp"
-        android:layout_gravity="center_horizontal"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:src="@drawable/account"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.1"
-            android:fontFamily="serif"
-            android:text="Name : "
-            android:textColor="#0099ff"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="false"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="10dp">
 
-        <TextView
-            android:id="@+id/name"
-            android:textAlignment="textEnd"
-            android:fontFamily="serif"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:textColor="@color/black"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Account Info"
+                        android:textColor="@color/design_default_color_primary"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/nameImageView"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/ic_name_dark" />
+
+                    <TextView
+                        android:id="@+id/nameTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/nameImageView"
+                        android:text="Name"
+                        android:textColor="@color/design_default_color_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/nameImageView"
+                        android:text="John Wick"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#BCB0B0" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/mobileImageView"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/ic_phone_dark" />
+
+                    <TextView
+                        android:id="@+id/mobileTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/mobileImageView"
+                        android:text="Mobile"
+                        android:textColor="@color/design_default_color_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/phone_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/mobileImageView"
+                        android:text="9809091243"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#BCB0B0" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/emailImageView"
+                        android:paddingLeft="5dp"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/ic_email_dark" />
+
+                    <TextView
+                        android:id="@+id/emailTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/emailImageView"
+                        android:text="Email"
+                        android:textColor="@color/design_default_color_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/email_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/emailImageView"
+                        android:text="student@gmail.com"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#BCB0B0" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/qualiImageView"
+                        android:paddingLeft="5dp"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/ic_account_no" />
+
+                    <TextView
+                        android:id="@+id/account_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/qualiImageView"
+                        android:text="Account No"
+                        android:textColor="@color/design_default_color_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/qualification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/qualiImageView"
+                        android:text="928673298"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#BCB0B0" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/cityImageView"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/ic_ifsc" />
+
+                    <TextView
+                        android:id="@+id/ifsc_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/cityImageView"
+                        android:text="IFSC Code"
+                        android:textColor="@color/design_default_color_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/cityProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/cityImageView"
+                        android:text="0000"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#BCB0B0" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/dobImageView"
+                        android:paddingTop="2.5dp"
+                        android:paddingBottom="2.5dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/ic_balance" />
+
+                    <TextView
+                        android:id="@+id/dobTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/dobImageView"
+                        android:text="Current Balance"
+                        android:textColor="@color/design_default_color_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/avail_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/dobImageView"
+                        android:text="10000"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#BCB0B0" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/transfer_money"
+            android:text="Transfer Money"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_marginTop="10dp"
-        android:padding="5dp"
-        android:layout_gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.1"
-            android:textSize="18sp"
-            android:fontFamily="serif"
+            android:padding="5dp"
             android:textStyle="bold"
-            android:textColor="#0099ff"
-            android:text="Account No : "/>
-
-        <TextView
-            android:id="@+id/account_no"
-            android:textAlignment="textEnd"
-            android:fontFamily="serif"
             android:textSize="18sp"
-            android:textColor="@color/black"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:backgroundTint="@color/design_default_color_primary" />
     </LinearLayout>
 
-    <LinearLayout
-        android:padding="5dp"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.1"
-            android:textSize="18sp"
-            android:fontFamily="serif"
-            android:textStyle="bold"
-            android:textColor="#0099ff"
-            android:text="Email : "/>
-
-        <TextView
-            android:id="@+id/email_id"
-            android:textAlignment="textEnd"
-            android:fontFamily="serif"
-            android:textSize="18sp"
-            android:textColor="@color/black"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:padding="5dp"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.1"
-            android:textSize="18sp"
-            android:fontFamily="serif"
-            android:textStyle="bold"
-            android:textColor="#0099ff"
-            android:text="IFSC Code : "/>
-
-        <TextView
-            android:id="@+id/ifsc_id"
-            android:layout_weight="1"
-            android:textAlignment="textEnd"
-            android:fontFamily="serif"
-            android:textSize="18sp"
-            android:textColor="@color/black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:padding="5dp"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.1"
-            android:textSize="18sp"
-            android:fontFamily="serif"
-            android:textStyle="bold"
-            android:textColor="#0099ff"
-            android:text="Mobile No : "/>
-
-        <TextView
-            android:id="@+id/phone_no"
-            android:textColor="@color/black"
-            android:layout_weight="1"
-            android:textAlignment="textEnd"
-            android:fontFamily="serif"
-            android:textSize="18sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_gravity="center_horizontal"
-        android:padding="5dp"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.1"
-            android:textSize="18sp"
-            android:fontFamily="serif"
-            android:textStyle="bold"
-            android:textColor="#0099ff"
-            android:text="Current Balance : "/>
-
-        <TextView
-            android:id="@+id/avail_balance"
-            android:layout_weight="1"
-            android:textAlignment="textEnd"
-            android:fontFamily="serif"
-            android:textSize="18sp"
-            android:textColor="@color/black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/transfer_money"
-        android:text="Transfer Money"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textStyle="bold"
-        android:backgroundTint="#0099ff"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"/>
-
-</LinearLayout>
+</ScrollView>

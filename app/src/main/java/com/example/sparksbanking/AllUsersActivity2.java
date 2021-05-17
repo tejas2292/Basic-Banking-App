@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,11 +30,9 @@ public class AllUsersActivity2 extends AppCompatActivity {
         phoneNo = findViewById(R.id.phone_no);
         transferMoney = findViewById(R.id.transfer_money);
 
-        // Getting the intent
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
 
-        // Extracting the data
         if (extras != null){
             name.setText(extras.getString("NAME"));
             accountNo.setText(String.valueOf(extras.getInt("ACCOUNT_NO")));
@@ -45,7 +42,7 @@ public class AllUsersActivity2 extends AppCompatActivity {
             balance.setText(extras.getString("BALANCE"));
         }
         else {
-            Log.d("TAG", "Empty Intent");
+            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
         }
 
         transferMoney.setOnClickListener(new View.OnClickListener() {
@@ -59,7 +56,7 @@ public class AllUsersActivity2 extends AppCompatActivity {
     private void enterAmount() {
         final AlertDialog.Builder mBuilder = new AlertDialog.Builder(AllUsersActivity2.this);
         View mView = getLayoutInflater().inflate(R.layout.row_dialog, null);
-        mBuilder.setTitle("Enter Amount").setView(mView).setCancelable(false);
+        mBuilder.setTitle("Enter Amount To Transfer").setView(mView).setCancelable(false);
 
         final EditText mAmount = (EditText) mView.findViewById(R.id.enter_money);
         mBuilder.setPositiveButton("SEND", new DialogInterface.OnClickListener() {
@@ -78,7 +75,6 @@ public class AllUsersActivity2 extends AppCompatActivity {
         dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Checking whether amount entered is correct or not
                 int currentBalance = Integer.parseInt(String.valueOf(balance.getText()));
 
                 if (mAmount.getText().toString().isEmpty()) {
