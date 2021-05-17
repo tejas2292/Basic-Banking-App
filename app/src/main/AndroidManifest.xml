@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/bank"
         android:supportsRtl="true"
         android:theme="@style/Theme.SparksBanking">
-        <activity android:name=".AllUsersActivity2"></activity>
+        <activity android:name=".AllUsersActivity3"></activity>
+        <activity android:name=".AllUsersActivity2" />
         <activity android:name=".AllUsersActivity1" />
         <activity android:name=".MainActivity">
             <intent-filter>

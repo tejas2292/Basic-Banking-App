@@ -1,5 +1,6 @@
 package com.example.sparksbanking;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -15,9 +16,12 @@ import java.util.ArrayList;
 public class ListUserAdapter extends RecyclerView.Adapter<ListUserAdapter.ViewHolder> {
 
     private ArrayList<UploadUser> userArrayList;
+    private Context context;
 
     public ListUserAdapter(Context context, ArrayList<UploadUser> list) {
         userArrayList = list;
+        this.context = context;
+
     }
 
     public  class ViewHolder extends RecyclerView.ViewHolder {
@@ -25,7 +29,6 @@ public class ListUserAdapter extends RecyclerView.Adapter<ListUserAdapter.ViewHo
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-
             userName = itemView.findViewById(R.id.username);
             userAccountBalance = itemView.findViewById(R.id.amount);
         }
@@ -55,6 +58,7 @@ public class ListUserAdapter extends RecyclerView.Adapter<ListUserAdapter.ViewHo
                 intent.putExtra("PHONE_NO", userArrayList.get(position).getPhoneNumber());
                 intent.putExtra("BALANCE", String.valueOf(userArrayList.get(position).getBalance()));
                 v.getContext().startActivity(intent);
+                ((Activity)context).finish();
             }
         });
     }

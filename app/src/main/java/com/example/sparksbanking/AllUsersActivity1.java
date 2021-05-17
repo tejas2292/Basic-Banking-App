@@ -58,7 +58,6 @@ public class AllUsersActivity1 extends AppCompatActivity {
             String ifscCode = cursor.getString(ifscCodeColumnIndex);
             int accountBalance = cursor.getInt(accountBalanceColumnIndex);
 
-            // Display the values from each column of the current row in the cursor in the TextView
             userArrayList.add(new UploadUser(currentName, accountNumber, phoneNumber, ifscCode, accountBalance, email));
         }
     }
