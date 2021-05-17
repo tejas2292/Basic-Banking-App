@@ -12,7 +12,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_margin="15dp"
-        android:src="@drawable/banking" />
+        android:background="@drawable/bank" />
 
     <TextView
         android:layout_width="match_parent"
@@ -37,7 +37,7 @@
             android:clickable="true"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
-            android:onClick="onAdminAddEmployee"
+            android:onClick="onViewUsers"
             app:cardCornerRadius="2dp"
             app:cardElevation="10dp">
 
@@ -51,9 +51,8 @@
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:layout_margin="15dp"
-                    android:background="@drawable/circleblue"
                     android:padding="15dp"
-                    android:src="@drawable/employee" />
+                    android:src="@drawable/users" />
 
                 <View
                     android:layout_width="match_parent"
@@ -67,7 +66,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:padding="10dp"
-                    android:text="View Users"
+                    android:text="View All Users"
                     android:textAlignment="center"
                     android:textColor="#000"
                     android:textSize="18sp"
@@ -86,7 +85,7 @@
             android:clickable="true"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
-            android:onClick="onAdminDeleteEmployee"
+            android:onClick="onViewTransaction"
             app:cardCornerRadius="2dp"
             app:cardElevation="10dp">
 
@@ -100,9 +99,8 @@
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:layout_margin="15dp"
-                    android:background="@drawable/circleblue"
                     android:padding="20dp"
-                    android:src="@drawable/deleteemp" />
+                    android:src="@drawable/transaction" />
 
                 <View
                     android:layout_width="match_parent"
@@ -116,7 +114,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:padding="10dp"
-                    android:text="Delete Employee"
+                    android:text="Transactions"
                     android:textAlignment="center"
                     android:textColor="#000"
                     android:textSize="18sp"
