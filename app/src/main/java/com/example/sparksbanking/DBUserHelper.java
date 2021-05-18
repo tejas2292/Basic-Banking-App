@@ -62,7 +62,7 @@ public class DBUserHelper extends SQLiteOpenHelper {
     public Cursor readParticularData (int accountNo) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("select * from " + DBUserContent.UserEntry.TABLE_NAME + " where " +
-                                        DBUserContent.UserEntry.COLUMN_USER_ACCOUNT_NUMBER + " = " + accountNo, null);
+                DBUserContent.UserEntry.COLUMN_USER_ACCOUNT_NUMBER + " = " + accountNo, null);
         return cursor;
     }
 

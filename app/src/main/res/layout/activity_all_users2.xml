@@ -204,7 +204,6 @@
                         android:src="@drawable/ic_account_no" />
 
                     <TextView
-                        android:id="@+id/account_no"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
@@ -215,7 +214,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/qualification"
+                        android:id="@+id/account_no"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
@@ -248,7 +247,7 @@
                         android:src="@drawable/ic_ifsc" />
 
                     <TextView
-                        android:id="@+id/ifsc_id"
+                        android:id="@+id/city"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
@@ -259,7 +258,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/cityProfile"
+                        android:id="@+id/ifsc_id"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
